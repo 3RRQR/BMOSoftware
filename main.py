@@ -1,6 +1,6 @@
 import tkinter as tk
 import random
-import sleep
+import time
 
 root = tk.Tk()
 face = random.randint(1, 30)
