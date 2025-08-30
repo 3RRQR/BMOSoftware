@@ -38,11 +38,7 @@ emotions = {
     },
     
     "idle": {
-<<<<<<< HEAD
-        "frames": [tk.PhotoImage(file=f'assets/idle/{i}.png') for i in range(1, 3)],
-=======
         "frames": load_frames("assets/idle", 2),
->>>>>>> 24e3da9 (edited animations.py)
         "weights": {0: 3, 1: 3, 2: 0},
         "playlist": []
     },
