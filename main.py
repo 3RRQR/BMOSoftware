@@ -2,7 +2,7 @@ import tkinter as tk
 from PIL import Image, ImageTk
 
 root = tk.Tk()
-emotion = "happy"
+emotion = "idle"
 
 from animations import generate_playlist, animate
 
