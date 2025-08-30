@@ -1,26 +1,20 @@
 import tkinter as tk
-import random
+from PIL import Image, ImageTk
 
 root = tk.Tk()
+emotion = "happy"
 
-import animations as anim
+from animations import generate_playlist, animate
 
 # Setting some window properties
 root.title("BMO")
-root.configure(background="#c9e4c3")
-root.geometry("1280x720+50+50")
+root.geometry("640x480")#window size
+root.configure(bg="#c9e4c3")
+root.overrideredirect(True)#no window bar
 
-label = tk.Label(root, image=anim.talking[0])
-label.pack()
-
-def animation(mood, dur, frame=0):
-    label.config(image=mood[frame])
-    if frame==0:
-        root.after(random.randint(dur[0], dur[1]), animation, mood, dur, (frame+1) % len(mood))
-    else:
-        root.after(dur[frame], animation, mood, dur, (frame+1) % len(mood))
-
-animation(anim.blinking, anim.blinkdur)
-
+label = tk.Label(root, bg="#c9e4c3")
+label.pack(expand=True)#expand true centers label
+generate_playlist(emotion)
+animate(emotion, label, root)
 
 root.mainloop()
