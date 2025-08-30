@@ -1,12 +1,8 @@
 import tkinter as tk
 import random
-import time
 
 root = tk.Tk()
-
-
-
-import animations 
+talk = 1
 
 frames = [
 tk.PhotoImage(file=f'assets/Rosto-1.png'),
@@ -22,11 +18,11 @@ root.geometry("1280x720+50+50")
 label = tk.Label(root, image=frames[0])
 label.pack()
 
-def animation(frame=0, mood=animations.blinking, dur=animations.blinkdur):
-    label.config(image=mood[frame])
-    root.after(random.randint(dur[0], dur[1]), animation, (frame+1) % len(mood))
+def talking(frame=0):
+    label.config(image=frames[frame])
+    root.after(random.randint(100, 500), talking, (frame+1) % len(frames))
 
-animation()
- 
+talking()
+
+
 root.mainloop()
-
