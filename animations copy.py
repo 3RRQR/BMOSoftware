@@ -7,14 +7,14 @@ def load_frames(path, count):
     frames = []
     for i in range(1, count + 1):
         img = Image.open(f'{path}/{i}.png')
-        img = img.resize((800, 450), Image.Resampling.LANCZOS)
+        img = img.resize((640, 480), Image.Resampling.LANCZOS)
         frames.append(ImageTk.PhotoImage(img))
     return frames
 
 
 emotions = {
     "happy": {
-        "frames": load_frames("assets/happy", 4),
+        "frames": load_frames("assets/happy", 5),
         "weights": {0: 3, 1: 1, 2: 2, 3: 3, 4: 3},
         "playlist": []
     },
@@ -72,6 +72,7 @@ def generate_playlist(emotion):
 
 def animate(emotion, label, root):
     emo = emotions[emotion]
+
     if not emo["playlist"]:
         generate_playlist(emotion)
     
