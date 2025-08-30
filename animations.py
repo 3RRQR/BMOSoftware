@@ -20,43 +20,47 @@ emotions = {
     },
 
     "sad": {
-        "frames": [tk.PhotoImage(file=f'assets/sad/{i}.png') for i in range(1, 4)],
+        "frames": load_frames("assets/sad", 3),
         "weights": {0: 1, 1: 2, 2: 3, 3: 4},
         "playlist": []
     },
     
     "bored": {
-        "frames": [tk.PhotoImage(file=f'assets/bored/{i}.png') for i in range(1, 6)],
+        "frames": load_frames("assets/bored", 5),
         "weights": {0: 3, 1: 3, 2: 4, 3: 1, 4: 5, 5: 6},
         "playlist": []
     },
 
     "angry": {
-        "frames": [tk.PhotoImage(file=f'assets/angry/{i}.png') for i in range(1, 5)],
+        "frames": load_frames("assets/angry", 4),
         "weights": {0: 1, 1: 3, 2: 2, 3: 4, 4: 5},
         "playlist": []
     },
     
     "idle": {
+<<<<<<< HEAD
         "frames": [tk.PhotoImage(file=f'assets/idle/{i}.png') for i in range(1, 3)],
+=======
+        "frames": load_frames("assets/idle", 2),
+>>>>>>> 24e3da9 (edited animations.py)
         "weights": {0: 3, 1: 3, 2: 0},
         "playlist": []
     },
 
     "shockedsad": {
-        "frames": [tk.PhotoImage(file=f'assets/shocked/{i}.png') for i in range(1, 4)],
+        "frames": load_frames("assets/shocked", 3),
         "weights": {0: 1, 1: 1, 2: 1, 3: 1},
         "playlist": []
     },
 
     "shockedhappy": {
-        "frames": [tk.PhotoImage(file=f'assets/shocked/{i}.png') for i in range(1, 3)],
+        "frames": load_frames("assets/shocked", 2),
         "weights": {0: 1, 1: 1, 2: 1},
         "playlist": []
     },
 
     "roboto": {
-        "frames": [tk.PhotoImage(file=f'assets/shocked/{i}.png') for i in range(1, 6)],
+        "frames": load_frames("assets/roboto", 5),
         "weights": {0: 1, 1: 1, 2: 1, 3: 1, 4: 3, 5: 3},
         "playlist": []
     },
