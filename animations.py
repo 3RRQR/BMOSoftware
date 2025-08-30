@@ -1,4 +1,5 @@
 import tkinter as tk
+import random
 
 talking = [
     tk.PhotoImage(file=f'assets/Rosto-1.png'),
@@ -6,8 +7,7 @@ talking = [
 ]
 
 talkdur = [
-    50,
-    1000
+
 ]
 
 blinking = [
@@ -17,5 +17,9 @@ blinking = [
 
 blinkdur = [
     50,
-    1000
+    random.randint(1000, 10000)
+]
+
+idle = [
+    
 ]
