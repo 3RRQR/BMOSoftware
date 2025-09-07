@@ -1,20 +1,19 @@
 import tkinter as tk
-
+import animations
 
 root = tk.Tk()
 emotion = "idle"
 
-from animations import generate_playlist, animate
 
-# Setting some window properties
 root.title("BMO")
-root.geometry("640x480")#window size
+root.geometry("640x480")    #window size
 root.configure(bg="#c9e4c3")
-#root.overrideredirect(True)#no window bar
+#root.overrideredirect(True)    #no window bar
 
-label = tk.Label(root, bg="#c9e4c3")
-label.pack(expand=True)#expand true centers label
-generate_playlist(emotion)
-animate(emotion, label, root)
+canvas = tk.Canvas(root, width=640, height=480, bg="#c9e4c3")
+canvas.pack()
+
+animations.display('eyebrows',9,canvas)
+
 
 root.mainloop()
